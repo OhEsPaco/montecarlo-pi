@@ -6,7 +6,7 @@ unsigned int seed = 1;
 
 // rand no funciona bien en paralelo, asi que he buscado otra solucion
 // https://www.bnl.gov/bnlhpc2013/files/pdf/OpenMPTutorial.pdf
-
+// https://en.wikipedia.org/wiki/Lehmer_random_number_generator
 
 void setSeed(int newSeed)
 {

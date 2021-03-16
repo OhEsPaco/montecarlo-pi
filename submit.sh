@@ -9,5 +9,15 @@
 
 for i in {1..16}
 do
-    srun ./pi.out $i 12345678
+    srun ./pi.out $i 1000
+done
+
+for i in {1..16}
+do
+    srun ./pi.out $i 100000
+done
+
+for i in {1..16}
+do
+    srun ./pi.out $i 10000000
 done

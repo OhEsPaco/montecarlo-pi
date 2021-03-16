@@ -5,8 +5,6 @@
 
 #include "pi_calculator.h"
 
-#define MAX_THREADS 16
-
 int main(int argc, char *argv[])
 {
 
@@ -37,10 +35,11 @@ int main(int argc, char *argv[])
         return EXIT_FAILURE;
     }
 
+    int maxThreads = omp_get_max_threads();
     // Determinamos el numero de threads
-    if (numberOfThreads > MAX_THREADS)
+    if (numberOfThreads > maxThreads)
     {
-        numberOfThreads = MAX_THREADS;
+        numberOfThreads = maxThreads;
     }
     if (numberOfPoints < numberOfThreads)
     {
